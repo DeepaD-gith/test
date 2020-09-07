@@ -2,7 +2,7 @@ var PLAY = 1;
 var END = 0;
 var gameState = PLAY;
 
-var trex, trex_running, trex_collided;
+var trex, trex_running, trex_collided, test;
 var ground, invisibleGround, groundImage;
 
 var cloudsGroup, cloudImage;
@@ -36,6 +36,7 @@ function preload(){
 function setup() {
   createCanvas(600, 200);
   
+  test = createSprite(150,180,20,50);
   trex = createSprite(50,180,20,50);
   
   trex.addAnimation("running", trex_running);
@@ -70,7 +71,7 @@ function setup() {
 
 function draw() {
   //trex.debug = true;
-  background("cyan");
+  background("red");
   text("Score 7-Sep: "+ score, 500,50);
   
   if (gameState===PLAY){
